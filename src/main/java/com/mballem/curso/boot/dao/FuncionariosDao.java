@@ -14,4 +14,6 @@ void save(Funcionarios departamento);
 	
 	List<Funcionarios> findAll();
 
+	Funcionarios findById(Long id);
+
 }
