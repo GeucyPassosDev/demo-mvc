@@ -6,14 +6,16 @@ import com.mballem.curso.boot.domain.Funcionarios;
 
 public interface FuncionariosDao {
 	
-void save(Funcionarios departamento);
+	void save(Funcionarios departamento);
 	
 	void update(Funcionarios departamento);
 	
 	void delete(Long id);
 	
+	Funcionarios findById(Long id);
+	
 	List<Funcionarios> findAll();
 
-	Funcionarios findById(Long id);
+	
 
 }
