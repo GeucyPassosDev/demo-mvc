@@ -69,6 +69,11 @@
 		</dependency>
 		
 		<dependency>
+			<groupId>nz.net.ultraq.thymeleaf</groupId>
+			<artifactId>thymeleaf-layout-dialect</artifactId>
+		</dependency>
+		
+		<dependency>
     		<groupId>org.webjars.bower</groupId>
     		<artifactId>jQuery-Mask-Plugin</artifactId>
     		<version>1.14.10</version>
