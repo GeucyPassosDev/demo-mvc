@@ -19,7 +19,7 @@ public class Funcionarios extends AbstractEntity<Long> {
 	@Column(nullable = false, unique = true)
 	private String nome;
 	
-	@Column(nullable = false, columnDefinition = "DECIMAL(7,2) DEFAUL 0.00")
+	@Column(nullable = false, columnDefinition = "DECIMAL(7,2) DEFAULT 0.00")
 	private BigDecimal salario;
 	
 	@Column(name = "data_entrada", nullable = false, columnDefinition = "DATE")
