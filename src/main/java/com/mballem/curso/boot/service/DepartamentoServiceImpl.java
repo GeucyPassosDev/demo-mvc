@@ -9,9 +9,14 @@ import com.mballem.curso.boot.dao.DepartamentoDao;
 import com.mballem.curso.boot.domain.Departamento;
 
 @Service
-public class DepartamentoServiceImpl implements DepartamentoService{
+public class DepartamentoServiceImpl implements DepartamentoService {
 	
-	private DepartamentoDao dao;
+	private final DepartamentoDao dao;
+
+	// Realiza a injeção de dependência do DepartamentoDao
+	public DepartamentoServiceImpl(DepartamentoDao dao) {
+		this.dao = dao;
+	}
 
 	@Transactional(readOnly = false)
 	@Override
@@ -42,5 +47,4 @@ public class DepartamentoServiceImpl implements DepartamentoService{
 	public List<Departamento> buscarTodos() {
 		return dao.findAll();
 	}
-
 }
