@@ -50,13 +50,17 @@
 	    
 	    var url = '';
 	    
-	    $('button[id*="btn_"]').click(function(){
+	    $('button[id*="btn_"]').click(function() {
 			url = "http://localhost:8080/" + $(this).attr('id').split("_")[1];
 		});
 		
-		$('#ok_cofirm').click(function(){
+		$('#ok-confirm').click(function() {
 			document.location.href = url;
 		});
+		
+		function confirmDelete(id) {
+        url = "http://localhost:8080/departamentos/excluir/" + id;
+    	};
 	    
 		$(function() {
 			$('[data-toggle="popover"]').popover();
